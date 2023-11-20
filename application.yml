@@ -1,0 +1,37 @@
+token:
+    expiration_time: 8640000
+    seecret: absdefijklmn12nmlkjifessm
+
+
+eureka:
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        preferIpAddress: true
+
+spring:
+    data:
+        mongodb:
+            database: Flotte
+            host: localhost
+            port: 27017
+    sleuth:
+        sampler:
+            probability: 1
+    zipkin:
+        base-url: http://localhost:9411
+        sender:
+            type: web
+
+logging:
+    level:
+        org:
+            springframework:
+                data: debug
+
+
+corsConfiguration:
+    Origins: http://localhost:4200
